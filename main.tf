@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.47"
+      version = "~> 4.67"
     }
   }
 
@@ -19,7 +19,7 @@ resource "aws_instance" "Pipeline_Machine" {
   key_name               = "DevOpsVpckeys"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   tags = {
-    Name = "Node_Created-By-GitAction"
+    Name = "Node-Created-By-GitAction"
   }
 
 }
@@ -54,6 +54,5 @@ terraform {
     key    = "env/cicd/terraform.tfstate"
     region = "eu-west-2"
     encrypt = false
-    #dynamodb_table = "null"
-    }
+     }
 }
