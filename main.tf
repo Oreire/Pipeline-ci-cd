@@ -2,11 +2,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 4.47"
     }
   }
 
-  required_version = ">= 1.2.0"
+  required_version = ">= 1.9.5"
 }
 
 provider "aws" {
@@ -51,7 +51,7 @@ resource "aws_security_group" "allow_ssh" {
 terraform {
   backend "s3" {
     bucket = "pipeline-cicd-store"
-    key    = "env/cicd/terraform.tfstate/"
+    key    = "env/cicd/terraform.tfstate"
     region = "eu-west-2"
     encrypt = false
     #dynamodb_table = "null"
