@@ -44,5 +44,6 @@ terraform {
     key    = "env/cicd/terraform.tfstate/"
     region = "eu-west-2"
     encrypt = false
+    dynamodb_table = "null"
     }
 }
