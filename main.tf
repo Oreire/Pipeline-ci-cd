@@ -8,7 +8,6 @@ resource "aws_instance" "Pipeline_Machine" {
   instance_type          = "t2.micro"
   key_name               = "DevOpsVpckeys"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-  subnet_id              = "subnet-08f39ef073ea39bcd"
   tags = {
     Name = "Node_Created-By-GitAction"
   }
@@ -45,6 +44,5 @@ terraform {
     key    = "env/cicd/terraform.tfstate/"
     region = "eu-west-2"
     encrypt = false
-    dynamodb_table = "null"
-  }
+    }
 }
