@@ -1,5 +1,3 @@
-#CI/CD AUTOMATION WITH GITHUB ACTIONS
-
 name: Laredo Git Action
 run-name: Laredo Git Action
 on: [push]
