@@ -1,2 +1,2 @@
 # Pipeline-ci-cd
-A simplistic GitHub Action Syntax and Logic to Automate Infrastructure Provisioning
+A demonstration of a simplistic GitHub Action Syntax/Logic Infrastructure Provisioning Automatation
