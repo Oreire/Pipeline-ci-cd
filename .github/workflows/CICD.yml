@@ -9,7 +9,7 @@ env:
   
 jobs:
 
-  Infrastructure_Provisioning_pipeline:
+  Simple_Test_For_Now:
       runs-on: ubuntu-latest
       steps: 
       - name: checkout code from repo
