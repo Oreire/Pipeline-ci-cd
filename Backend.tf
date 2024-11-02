@@ -6,7 +6,5 @@ terraform {
     bucket  = "cicd-pipeline-store"
     key     = "env/CICD/terraform.tfstate"
     region  = "eu-west-2"
-    encrypt = false
-    version = true
-  }
+      }
 }
