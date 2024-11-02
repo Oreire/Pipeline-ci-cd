@@ -1,13 +1,3 @@
-/* terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws" 
-      version = "~> 4.16"
-    }
-  }
-
-  required_version = ">= 1.2.0"
-} */
 
 provider "aws" {
   region = "eu-west-2"
@@ -21,14 +11,12 @@ resource "aws_instance" "Pipeline_created_Machine" {
   tags = {
     Name = "Node-Created-By-GitAction"
   }
-
 }
 
 #Create Security Group for Pipeline_Node (EC2 Instance)
 
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"
-  # ... other configuration ...
   egress {
     from_port        = 0
     to_port          = 0
