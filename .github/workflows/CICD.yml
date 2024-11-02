@@ -21,7 +21,8 @@ jobs:
           terraform_version: 1.3.0
 
       - name: Terraform Init
-        run:  terraform init -backend-config="bucket=cicd-pipeline-store" -backend-config="key=env/CICD/terraform.tfstate"
+        run:  terraform init -backend-config="bucket=cicd-pipeline-store" -backend-config="region=eu-west-2" -backend-config="key=env/CICD/terraform.tfstate"
+
       
       - name: Terraform Plan
         run:  terraform plan
